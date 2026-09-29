@@ -1,6 +1,8 @@
 # 读书笔记
 
-每本书（或一组相关的书）一份笔记，存放在 [`notes/`](notes/) 目录下。HTML 格式的笔记请下载后用浏览器打开，GitHub 只显示源码。新笔记从 [`templates/book-note.md`](templates/book-note.md) 模板开始。
+在线阅读：https://impanyu.github.io/books/
+
+每本书（或一组相关的书）一份笔记，存放在 [`notes/`](notes/) 目录下。HTML 笔记请在上面的网站上阅读。新笔记从 [`templates/book-note.md`](templates/book-note.md) 模板开始。
 
 ## 书单
 
