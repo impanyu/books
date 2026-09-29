@@ -25,6 +25,14 @@ svg .r{stroke:var(--red);fill:none;stroke-width:2}svg .box{fill:var(--bg);stroke
 table{border-collapse:collapse;width:100%;font-size:14px;margin:12px 0}td,th{border:1px solid var(--line);padding:6px 8px;text-align:center}
 ul{padding-left:1.3em}li{margin:4px 0}
 .note{border-left:3px solid var(--line);padding-left:12px;color:var(--muted);font-size:15px}
+/* toc */
+nav.toc{background:var(--card);border-radius:8px;padding:14px 18px;margin:24px 0}
+nav.toc>b{display:block;margin-bottom:6px}
+nav.toc ol{margin:0;padding-left:1.1em}nav.toc ol ol{padding-left:1.2em;font-size:14px}
+nav.toc li{margin:2px 0}nav.toc a{color:var(--fg);text-decoration:none}nav.toc a:hover{color:var(--red)}
+h2,h3{scroll-margin-top:16px}
+a.top{position:fixed;right:16px;bottom:16px;background:var(--card);color:var(--muted);border-radius:20px;padding:6px 12px;font-size:13px;text-decoration:none;box-shadow:0 1px 4px rgba(0,0,0,.15)}
+/* /toc */
 </style>
 </head>
 <body><main>
@@ -35,29 +43,86 @@ ul{padding-left:1.3em}li{margin:4px 0}
 <b>怎么读：</b>黑字是我的归纳和组织；<q class="x">红字</q> 是原书摘录，后面的灰色小字链接直达微信读书对应章节（需登录）。“书一”指第一本（36 章，以美国经济为例），“书二”指第二本（8 部分，以中国经济为例）。图都是按原书内容重画的示意图。
 </div>
 
-<h2>导读：两本书是什么关系</h2>
+<nav class="toc" id="toc"><b>目录</b><ol>
+<li><a href="#s1">导读：两本书是什么关系</a>
+</li>
+<li><a href="#s2">一、经济学家的思维工具箱</a>
+<ol>
+<li><a href="#s2-1">1. 稀缺与取舍</a></li>
+<li><a href="#s2-2">2. 机会成本与沉没成本</a></li>
+<li><a href="#s2-3">3. 看不见的手</a></li>
+</ol></li>
+<li><a href="#s3">二、市场如何运转</a>
+<ol>
+<li><a href="#s3-1">4. 分工：没有人能独自造出一支铅笔</a></li>
+<li><a href="#s3-2">5. 供给与需求</a></li>
+<li><a href="#s3-3">6. 弹性</a></li>
+<li><a href="#s3-4">7. 价格管制：好心为什么常办坏事</a></li>
+<li><a href="#s3-5">8. 劳动力市场：你的工资由什么决定</a></li>
+</ol></li>
+<li><a href="#s4">三、钱与时间</a>
+<ol>
+<li><a href="#s4-1">9. 折现与复利</a></li>
+<li><a href="#s4-2">10. 投资的四个维度</a></li>
+<li><a href="#s4-3">11. 金融中介：银行、债券、股票</a></li>
+</ol></li>
+<li><a href="#s5">四、市场会失灵，政府也会</a>
+<ol>
+<li><a href="#s5-1">12. 竞争的四种形态</a></li>
+<li><a href="#s5-2">13. 外部性：污染与创新</a></li>
+<li><a href="#s5-3">14. 公共物品与搭便车</a></li>
+<li><a href="#s5-4">15. 信息不对称、保险与代理人</a></li>
+<li><a href="#s5-5">16. 国企、僵尸企业与政府的角色</a></li>
+</ol></li>
+<li><a href="#s6">五、贫困与不平等</a>
+</li>
+<li><a href="#s7">六、宏观：衡量一个国家的经济</a>
+<ol>
+<li><a href="#s7-1">17. GDP 及其局限</a></li>
+<li><a href="#s7-2">18. 增长：长期里唯一重要的事</a></li>
+<li><a href="#s7-3">19. 失业</a></li>
+<li><a href="#s7-4">20. 通胀</a></li>
+</ol></li>
+<li><a href="#s8">七、宏观政策</a>
+<ol>
+<li><a href="#s8-1">21. 总供给与总需求</a></li>
+<li><a href="#s8-2">22. 财政政策、赤字与债务</a></li>
+<li><a href="#s8-3">23. 货币与央行</a></li>
+<li><a href="#s8-4">24. 房地产与金融危机</a></li>
+</ol></li>
+<li><a href="#s9">八、开放经济</a>
+<ol>
+<li><a href="#s9-1">25. 贸易的好处与全球价值链</a></li>
+<li><a href="#s9-2">26. 贸易差额的真正含义</a></li>
+<li><a href="#s9-3">27. 资本流动、汇率与危机</a></li>
+</ol></li>
+<li><a href="#s10">结语</a>
+</li>
+</ol></nav>
+
+<h2 id="s1">导读：两本书是什么关系</h2>
 <p>两本书作者相同，框架也几乎一样：先讲个人和企业怎样做决策（微观），再讲整个国家的经济怎样运行（宏观）。书一写于 2008 年金融危机之后，数据和案例多来自美国；书二是作者面向中国读者重写的版本，把例子换成了长城脚下的草莓、排队购房、人民币汇率、国企改革、中式扶贫。所以本合编不按两本书的章节走，而是按“一套思维工具 → 市场 → 市场失灵 → 宏观 → 开放经济”重新组织，同一个概念把两本书的美国例子和中国例子放在一起。</p>
 <p>作者在书一开篇就定了调：<q class="x">人们卖弄的经济学原理只有50%是正确的</q><a class="src" href="https://weread.qq.com/web/reader/f7f327705ae63ef7f54c98bk17e328b022b17e62166fad4" target="_blank">《斯坦福极简经济学》·第01章标题</a>。这本书不教你预测股市，也不替任何政治立场站队，它教的是一种<b>思考问题的框架</b>。</p>
 
-<h2>一、经济学家的思维工具箱</h2>
-<h3>1. 稀缺与取舍</h3>
+<h2 id="s2">一、经济学家的思维工具箱</h2>
+<h3 id="s2-1">1. 稀缺与取舍</h3>
 <p>经济学的出发点是稀缺：资源有限，欲望无限，连每天的时间都只有 24 小时。于是每个社会都要回答三个问题：生产什么、怎么生产、为谁生产。现实中没有纯粹的“全交给市场”或“全交给政府”，所有国家都在两端之间找位置。</p>
 <p>既然稀缺，就一定有取舍：<q class="x">在任何情况下都必须有所取舍</q><a class="src" href="https://weread.qq.com/web/reader/f7f327705ae63ef7f54c98bkd9d320f022ed9d4f495e456" target="_blank">《斯坦福极简经济学》·第04章标题</a>。</p>
-<h3>2. 机会成本与沉没成本</h3>
+<h3 id="s2-2">2. 机会成本与沉没成本</h3>
 <ul>
 <li><b>机会成本</b>：一样东西的真实成本，是你为它放弃的其他东西。上大学的成本不只是学费，还有这几年本可以赚到的工资。在泰国旅游花掉 1.2 万元，经济学家会问：这笔钱原本可以用来做什么？<a class="src" href="https://weread.qq.com/web/reader/804326b0813ab6c61g019edeke4d32d5015e4da3b7fbb1fa" target="_blank">书二·为什么有的人够聪明却不够富有</a></li>
 <li><b>沉没成本</b>：已经花掉、收不回的钱，比如看了半小时的烂电影、研发失败的新产品。它不该影响你接下来的决定。<a class="src" href="https://weread.qq.com/web/reader/804326b0813ab6c61g019edeke4d32d5015e4da3b7fbb1fa" target="_blank">书二·同上</a></li>
 <li><b>“企业多缴税，个人就少缴”是误解</b>：企业只是一种组织，税最终会落到消费者、员工或股东身上。<a class="src" href="https://weread.qq.com/web/reader/f7f327705ae63ef7f54c98bk17e328b022b17e62166fad4" target="_blank">书一·第01章</a></li>
 </ul>
-<h3>3. 看不见的手</h3>
+<h3 id="s2-3">3. 看不见的手</h3>
 <p>亚当·斯密的“看不见的手”在《国富论》里其实只出现过一次，到 20 世纪才广为人知。核心意思是：<q class="x">自私行为可能带来积极的社会影响，即使人们的初衷并非如此</q><a class="src" href="https://weread.qq.com/web/reader/804326b0813ab6c61g019edekc9f326d018c9f0f895fb5e4" target="_blank">《斯坦福极简经济学2》·如何看见那只“看不见的手”</a>。消费者比较、挑选商品，企业为了赚钱去降成本、做创新，价格把这些分散的信息汇总起来。</p>
 <p>这只手也有消极的一面：刷好评、恶意差评、污染环境，它还保证不了每个孩子都能上学、看病。所以政策的思路是“顺着激励走”：想让人少用汽油，就对汽油征税；想让人多用新能源，就补贴它。</p>
 
-<h2>二、市场如何运转</h2>
-<h3>4. 分工：没有人能独自造出一支铅笔</h3>
+<h2 id="s3">二、市场如何运转</h2>
+<h3 id="s3-1">4. 分工：没有人能独自造出一支铅笔</h3>
 <p>《我，铅笔》的故事讲的是：造一支铅笔要用到木材、石墨、橡胶、金属，没有哪个人掌握全部知识，靠分工才能造出来。亚当·斯密笔下的别针工厂里，一个人一天只能做约 20 根别针，10 个人分工完成 18 道工序，人均每天约 4,800 根，效率提高了约 240 倍。<q class="x">做自己最适合做的事，就有更好的生产力</q><a class="src" href="https://weread.qq.com/web/reader/f7f327705ae63ef7f54c98bkf7132c6022cf7177163c01c" target="_blank">《斯坦福极简经济学》·第02章标题</a>。分工的好处来自比较优势、熟能生巧和规模经济。如今分工已经跨越国界，一部 iPhone 的零件来自几十个国家（见第八部分）。</p>
 
-<h3>5. 供给与需求</h3>
+<h3 id="s3-2">5. 供给与需求</h3>
 <p>作者 2018 年在清华讲课期间去长城，看到路边有人卖草莓，就用它来讲供需。<a class="src" href="https://weread.qq.com/web/reader/804326b0813ab6c61g019edek16732dc0161679091c5aeb1" target="_blank">书二·什么决定了长城脚下草莓的价格</a></p>
 <ul>
 <li><b>需求量 vs 需求</b>：需求量是某个价格下想买多少，是曲线上的一个点；需求是价格和需求量之间的整条关系曲线。涨价时需求量下降，原因有两个：可以换成替代品（替代效应），手里的钱能买的东西变少了（收入效应）。</li>
@@ -79,7 +144,7 @@ ul{padding-left:1.3em}li{margin:4px 0}
 </figure>
 <p>要注意的是，<q class="x">市场均衡点并不表示人们对结果感到满意</q><a class="src" href="https://weread.qq.com/web/reader/f7f327705ae63ef7f54c98bk6c8328f022d6c8349cc72d5" target="_blank">《斯坦福极简经济学》·第03章标题</a>。买家总觉得买贵了，卖家总觉得卖便宜了。钻石和水的悖论也说明，价格反映的是稀缺，不是“有多重要”。</p>
 
-<h3>6. 弹性</h3>
+<h3 id="s3-3">6. 弹性</h3>
 <p>弹性 = 数量变化的百分比 ÷ 价格变化的百分比。必需品、没有替代品的东西（胰岛素、烟瘾者的香烟）弹性小；替代品多的东西弹性大。几个用法：</p>
 <ul>
 <li><b>成本能不能转嫁</b>：需求弹性小，成本主要由消费者承担；需求弹性大，生产者只能自己消化。</li>
@@ -87,11 +152,11 @@ ul{padding-left:1.3em}li{margin:4px 0}
 <li><b>已故画家的作品</b>供给完全没有弹性，需求一上来，只会推高价格。<a class="src" href="https://weread.qq.com/web/reader/f7f327705ae63ef7f54c98bk67c32d7022f67c6a1e7ce82" target="_blank">书一·第05章</a> <a class="src" href="https://weread.qq.com/web/reader/804326b0813ab6c61g019edek8f132430178f14e45fce0f7" target="_blank">书二·什么时候该买</a></li>
 </ul>
 
-<h3>7. 价格管制：好心为什么常办坏事</h3>
+<h3 id="s3-4">7. 价格管制：好心为什么常办坏事</h3>
 <p>价格上限会造成短缺：美国 200 多个城市的房租管制，结果是房东不修房子、少建出租房、暗收“钥匙费”。中国 1998 年以前的租金调控、2015 年前的药品最高限价，也有同样的问题。价格下限会造成过剩，比如农产品保护价。书二的比喻很好记：<q class="x">价格是一种信息</q><a class="src" href="https://weread.qq.com/web/reader/804326b0813ab6c61g019edekaab325601eaab3238922e53" target="_blank">《斯坦福极简经济学2》·是什么造成排队购房</a>，压住价格就像“斩来使”，你再也收不到真实的情况。</p>
 <p class="note">替代思路：直接给低收入者现金或住房券；增加供给（多盖房子）；建立储备，低价时收储、高价时投放。价格上限最大的受益者，往往是中上阶层，而不是穷人。</p>
 
-<h3>8. 劳动力市场：你的工资由什么决定</h3>
+<h3 id="s3-5">8. 劳动力市场：你的工资由什么决定</h3>
 <p>在劳动力市场上，家庭是卖方，企业是买方，角色和商品市场正好相反。<q class="x">你的薪水最终由你的产出决定</q><a class="src" href="https://weread.qq.com/web/reader/f7f327705ae63ef7f54c98bk64232b60230642e92efb54c" target="_blank">《斯坦福极简经济学》·第06章标题</a>：长期来看，工资取决于劳动生产率。如果你创造的价值远高于工资，别的公司就会来挖你。</p>
 <ul>
 <li><b>最低工资</b>：受益的是保住工作的低技能工人，代价集中落在丢掉工作的人身上。替代方案是对低收入劳动者直接补贴，比如美国的工资所得税收抵免（EITC）。</li>
@@ -101,13 +166,13 @@ ul{padding-left:1.3em}li{margin:4px 0}
 <li><b>福利其实也是工资</b>：“慷慨的福利”最终是员工用较低的工资换来的。</li>
 </ul>
 
-<h2>三、钱与时间</h2>
-<h3>9. 折现与复利</h3>
+<h2 id="s4">三、钱与时间</h2>
+<h3 id="s4-1">9. 折现与复利</h3>
 <p><q class="x">折现值是个很重要的观念</q><a class="src" href="https://weread.qq.com/web/reader/f7f327705ae63ef7f54c98bkf4532c00231f457c545ad3c" target="_blank">《斯坦福极简经济学》·第07章标题</a>。今天的 100 元比一年后的 100 元值钱。利率为 10% 时，一年后的 100 元只相当于今天的约 90.9 元。彩票宣传的“头奖”，通常是分 30 年支付的总额，折成现值大约只有 2/3。反过来看就是复利：</p>
 <table><tr><th>投入 1,000 美元，存 40 年</th><th>年化 5%</th><th>年化 10%</th><th>年化 15%</th></tr><tr><td>40 年后约为</td><td>7,000</td><td>45,000</td><td>268,000</td></tr></table>
 <div class="sub" style="margin-top:-6px">表 1　复利的力量（数据据<a class="src" href="https://weread.qq.com/web/reader/f7f327705ae63ef7f54c98bkc0c320a0232c0c7c76d365a" target="_blank">书一·第08章</a>整理）</div>
 
-<h3>10. 投资的四个维度</h3>
+<h3 id="s4-2">10. 投资的四个维度</h3>
 <p>两本书给了同一个框架：<b>回报率、风险、流动性、税收</b>。<a class="src" href="https://weread.qq.com/web/reader/f7f327705ae63ef7f54c98bkc0c320a0232c0c7c76d365a" target="_blank">书一·第08章</a> <a class="src" href="https://weread.qq.com/web/reader/804326b0813ab6c61g019edekc20321001cc20ad4d76f5ae" target="_blank">书二·别只盯着回报率</a></p>
 <ul>
 <li>从银行存款、债券、股票、房产到黄金，风险逐级升高。分散投资是降低风险最简单的办法。</li>
@@ -116,11 +181,11 @@ ul{padding-left:1.3em}li{margin:4px 0}
 <li>所有建议里最朴素的一条：<b>尽早开始存钱，并且坚持下去</b>。</li>
 <li>书一借用了马尔基尔的“睡眠安稳量表”：把钱放进去以后，晚上睡得着吗？从存款、货币基金、债券、蓝筹股、成长股、房地产到贵金属，越往后越睡不安稳。另外，年轻人最常犯的错误是早年太保守，白白浪费了几十年的复利。<a class="src" href="https://weread.qq.com/web/reader/f7f327705ae63ef7f54c98bkc0c320a0232c0c7c76d365a" target="_blank">书一·第08章</a></li>
 </ul>
-<h3>11. 金融中介：银行、债券、股票</h3>
+<h3 id="s4-3">11. 金融中介：银行、债券、股票</h3>
 <p>金融中介把分散的小额资金汇集起来，再借给需要的人。银行赚存贷利差（例如贷款利率 5%，存款利率 2%）；债券是有期限、有利率的借款合同；股票是企业的所有权，收益来自股息和资本利得。企业的资金来源有三种：留存利润、借款、发行股票。<a class="src" href="https://weread.qq.com/web/reader/f7f327705ae63ef7f54c98bkf4532c00231f457c545ad3c" target="_blank">书一·第07章</a> <a class="src" href="https://weread.qq.com/web/reader/804326b0813ab6c61g019edek65132ca01b6512bd43d90e3" target="_blank">书二·货币的时间价值</a></p>
 
-<h2>四、市场会失灵，政府也会</h2>
-<h3>12. 竞争的四种形态</h3>
+<h2 id="s5">四、市场会失灵，政府也会</h2>
+<h3 id="s5-1">12. 竞争的四种形态</h3>
 <figure>
 <svg viewBox="0 0 520 110" role="img" aria-label="竞争光谱">
 <line class="ln" x1="30" y1="50" x2="490" y2="50"/>
@@ -138,24 +203,24 @@ ul{padding-left:1.3em}li{margin:4px 0}
 <li><b>卡特尔</b>：亚当·斯密早就说过，同行聚会，话题常常以合谋涨价收场。维生素、赖氨酸等国际卡特尔都被重罚过。掠夺性定价、搭售、独家交易，与正常竞争之间的界限很模糊。<a class="src" href="https://weread.qq.com/web/reader/f7f327705ae63ef7f54c98bk9a132c802349a1158154a83" target="_blank">书一·第10章</a></li>
 <li><b>反垄断和管制</b>：书一介绍了 HHI 指数，也讲了“市场范围怎么界定”这个难题。解除管制之后，美国消费者每年约节省 500 亿美元，所以<q class="x">最佳的管制法或许就是解除管制</q><a class="src" href="https://weread.qq.com/web/reader/f7f327705ae63ef7f54c98bkd8232f00235d82c8d161fb2" target="_blank">《斯坦福极简经济学》·第11章标题</a>，但仍要具体问题具体分析。</li>
 </ul>
-<h3>13. 外部性：污染与创新</h3>
+<h3 id="s5-2">13. 外部性：污染与创新</h3>
 <ul>
 <li><b>负外部性（污染）</b>：从“命令与控制”式的管制，转向排污税、可交易的排放许可和产权界定。<q class="x">主张绝对的零污染是不可行的</q><a class="src" href="https://weread.qq.com/web/reader/f7f327705ae63ef7f54c98bka6832360236a684eceeee20" target="_blank">《斯坦福极简经济学》·第12章标题</a>，目标是让社会成本和社会收益平衡。</li>
 <li><b>正外部性（创新）</b>：<q class="x">自由市场并不保证会给发明者奖励</q><a class="src" href="https://weread.qq.com/web/reader/f7f327705ae63ef7f54c98bkb5332110237b53b3a3d68d2" target="_blank">《斯坦福极简经济学》·第13章标题</a>。轧棉机的发明者惠特尼几乎没赚到钱；激光的发明者古尔德打了约 20 年专利官司。专利、商标、著作权和商业机密能保护创新，但“专利丛林”（施乐在复印机上拥有 1,700 多项专利）又会阻碍后来者。作者的看法是：保护知识产权，是为了鼓励持续创新，不是为了让发明者高兴。<a class="src" href="https://weread.qq.com/web/reader/804326b0813ab6c61g019edekf4532c00231f457c545ad3c" target="_blank">书二·企业创新要踩对点</a></li>
 </ul>
-<h3>14. 公共物品与搭便车</h3>
+<h3 id="s5-3">14. 公共物品与搭便车</h3>
 <p>公共物品有两个特点：多一个人用不影响别人（非竞争性），也很难把不付钱的人挡在外面（非排他性），国防、基础研究都是例子。因为人人都想搭便车，市场提供不足，所以<q class="x">缴税是用强迫的方式克服搭便车问题</q><a class="src" href="https://weread.qq.com/web/reader/f7f327705ae63ef7f54c98bk9f6326602389f61408e3715" target="_blank">《斯坦福极简经济学》·第14章标题</a>。</p>
-<h3>15. 信息不对称、保险与代理人</h3>
+<h3 id="s5-4">15. 信息不对称、保险与代理人</h3>
 <ul>
 <li>品牌、质保、执照、信用评级，都是市场自己发展出来、用来弥补信息不对称的办法。<a class="src" href="https://weread.qq.com/web/reader/f7f327705ae63ef7f54c98bk09332a2023b093f65e0888c" target="_blank">书一·第17章</a></li>
 <li>保险的原理是把风险汇集到一个池子里，例如 1,000 名司机，每人每年缴约 335 美元，就能覆盖少数人发生事故的约 33.5 万美元赔付；它面临两个难题：<b>道德风险</b>（有了保险就不那么小心）和<b>逆向选择</b>（风险越高的人越想买保险）。美国的人均医疗支出约为其他富国的两倍，但没有一个国家找到了“既覆盖所有人又能控制成本”的办法。</li>
 <li><b>委托代理问题</b>：安然公司破产时，董事会、审计、分析师这些“看门人”全部失灵。政府同样有代理人问题：选民“理性无知”，特殊利益集团游说有效。<a class="src" href="https://weread.qq.com/web/reader/f7f327705ae63ef7f54c98bk0723244023c072b030ba601" target="_blank">书一·第18章</a></li>
 </ul>
-<h3>16. 国企、僵尸企业与政府的角色</h3>
+<h3 id="s5-5">16. 国企、僵尸企业与政府的角色</h3>
 <p>中国的私营企业贡献了 60% 以上的 GDP、约 85% 的就业；国企贡献约 30% 的 GDP，集中在能源、电信、银行等支柱行业。国企的风险在于，它亏损了也能继续借到钱，于是出现“僵尸企业”（国务院的标准是连续亏损 3 年以上、依赖政府或银行输血）。<q class="x">健康发展的经济是不断把劳动力和投资等资源从生产力较低的地区转移到生产力较高的地区</q><a class="src" href="https://weread.qq.com/web/reader/804326b0813ab6c61g019edekd9d320f022ed9d4f495e456" target="_blank">《斯坦福极简经济学2》·国企和私企目标有何不同</a>。IMF 的一项研究估计，妥善处理僵尸企业可以让中国长期增速每年提高约 1 个百分点。</p>
 <p>书二用龙舟做比喻：<q class="x">政府应该驾驭方向，而不是奋力划桨</q><a class="src" href="https://weread.qq.com/web/reader/804326b0813ab6c61g019edek67c32d7022f67c6a1e7ce82" target="_blank">《斯坦福极简经济学2》·私营企业是经济之王吗</a>。</p>
 
-<h2>五、贫困与不平等</h2>
+<h2 id="s6">五、贫困与不平等</h2>
 <ul>
 <li><b>贫困 ≠ 不平等</b>：中国 1978 年以来贫困人口急剧减少，不平等却在扩大。<a class="src" href="https://weread.qq.com/web/reader/804326b0813ab6c61g019edek283328802332838023a7529" target="_blank">书二·经济学怎么定义贫穷与不平等</a></li>
 <li><b>贫困线从哪里来</b>：美国在 1963 年用“最低食物预算 × 3”算出贫困线，因为当时食物约占家庭开支的 1/3，之后只按通胀调整，一直沿用至今。美国贫困率在 20 世纪 60 年代大幅下降，1973 年以后就基本停滞了，老人贫困率明显下降，单亲母亲家庭成为最贫困的群体。<a class="src" href="https://weread.qq.com/web/reader/f7f327705ae63ef7f54c98bk72b327f023972b32a1f7e2d" target="_blank">书一·第15章</a></li>
@@ -177,28 +242,28 @@ ul{padding-left:1.3em}li{margin:4px 0}
 <figcaption>图 3　基尼系数的含义（据原书对“完全平等线”和实际分配的描述重绘）<a class="src" href="https://weread.qq.com/web/reader/804326b0813ab6c61g019edekd8232f00235d82c8d161fb2" target="_blank">书二·家庭收入5等分评估</a></figcaption>
 </figure>
 
-<h2>六、宏观：衡量一个国家的经济</h2>
-<h3>17. GDP 及其局限</h3>
+<h2 id="s7">六、宏观：衡量一个国家的经济</h2>
+<h3 id="s7-1">17. GDP 及其局限</h3>
 <p>GDP 是一年内生产的<b>最终</b>商品和服务的总价值，GDP = C + I + G + (X − M)。库兹涅茨被称为“GDP 之父”。<q class="x">人均GDP是一个有用的比较工具</q><a class="src" href="https://weread.qq.com/web/reader/f7f327705ae63ef7f54c98bk44f328c023e44f683a8420b" target="_blank">《斯坦福极简经济学》·第19章标题</a>，但它不计入家务劳动、闲暇、健康和环境，灾后重建反而会让 GDP 上升。不丹提出了“国民幸福指数”，联合国有人类发展指数（HDI）。中国人的幸福感评分 1990 年约 7.2，2009 年约 6.8，而这期间人均收入涨了约 4 倍。结论是：<q class="x">GDP是一种有用的统计方式，但它并不能代表一切</q><a class="src" href="https://weread.qq.com/web/reader/804326b0813ab6c61g019edekc7432af0210c74d97b01b1c" target="_blank">《斯坦福极简经济学2》·GDP越高，你就越幸福吗</a>。</p>
-<h3>18. 增长：长期里唯一重要的事</h3>
+<h3 id="s7-2">18. 增长：长期里唯一重要的事</h3>
 <p>增长率的差别，会被复利放大：</p>
 <table><tr><th>年增长率</th><th>10 年后</th><th>25 年后</th><th>40 年后</th></tr><tr><td>1%</td><td>110</td><td>128</td><td>149</td></tr><tr><td>3%</td><td>134</td><td>209</td><td>326</td></tr><tr><td>5%</td><td>163</td><td>339</td><td>704</td></tr><tr><td>8%</td><td>216</td><td>685</td><td>2,172</td></tr></table>
 <div class="sub" style="margin-top:-6px">表 2　初始值为 100 时的增长（数据据<a class="src" href="https://weread.qq.com/web/reader/f7f327705ae63ef7f54c98bk03a32a4023f03afdbd66a39" target="_blank">书一·第20章</a>整理）</div>
 <p>增长的来源有四个：<b>实物资本、人力资本、技术、激励</b>。中国稻米单产从 1960 年每公顷约 2 吨提高到现在约 7 吨，靠的不是更多人、更长时间，而是教育、良种、化肥和机械化。<q class="x">提高每个工人的生产力水平是实现持续增长的唯一途径</q><a class="src" href="https://weread.qq.com/web/reader/804326b0813ab6c61g019edek70e32fb021170efdf2eca12" target="_blank">《斯坦福极简经济学2》·经济增长的神奇公式</a>。</p>
 <p><b>中国面临的挑战</b>：卢卡斯把各国发展比作“赛马”，后来者有后发优势，但也可能落入中等收入陷阱。靠农业人口转移和出口拉动增长的空间在收窄，还面临“过早去工业化”；未来的动力在国内消费、服务业和城市群。目前中国的生产率只有美国的约 20%，还有很大的追赶空间。<a class="src" href="https://weread.qq.com/web/reader/804326b0813ab6c61g019edek6f4322302126f4922f45dec" target="_blank">书二·中国可持续增长所面临的挑战</a></p>
 <p><b>全球版图</b>（书一，约 2009 年）：全球 GDP 约 58 万亿美元，人口约 68 亿；高收入国家人口占 16%，产出却占 72%。东亚靠高储蓄、高投资、教育和融入全球经济而崛起；拉丁美洲受困于债务、保护主义和恶性通胀；中东过度依赖石油；撒哈拉以南非洲的儿童死亡率在下降，入学率在上升，但治理仍是瓶颈。<a class="src" href="https://weread.qq.com/web/reader/f7f327705ae63ef7f54c98bkd1f32d7024fd1fe173d0651" target="_blank">书一·第36章</a></p>
-<h3>19. 失业</h3>
+<h3 id="s7-3">19. 失业</h3>
 <ul>
 <li>失业的定义是：没有工作<b>并且</b>在找工作。<q class="x">经济衰退，薪资很少会大幅下降</q><a class="src" href="https://weread.qq.com/web/reader/f7f327705ae63ef7f54c98bkea532350240ea5d2f1c4357" target="_blank">《斯坦福极简经济学》·第21章标题</a>，因为降薪会打击士气、赶走最好的员工，所以企业宁可裁员。</li>
 <li>失业分三类：周期性失业、摩擦性失业、结构性失业。后两类加起来就是“自然失业率”。</li>
 <li>中国过去的登记失业率长期在 4%–4.3% 之间，几乎不变，像一支卡住的体温计。2018 年起改用调查失业率，覆盖了进城的农村劳动力。<a class="src" href="https://weread.qq.com/web/reader/804326b0813ab6c61g019edek1f032c402131f0e3dad99f3" target="_blank">书二·失业究竟是谁的错</a></li>
 <li>人口转型：中国劳动年龄人口 2011 年约 9.25 亿，预计 2050 年约 7 亿。答案是投资教育和人力资本，并借鉴德国、瑞士的学徒制。<a class="src" href="https://weread.qq.com/web/reader/804326b0813ab6c61g019edek3c5327902153c59dc0488e1" target="_blank">书二·如何应对未来的就业挑战</a></li>
 </ul>
-<h3>20. 通胀</h3>
+<h3 id="s7-4">20. 通胀</h3>
 <p>通胀是整体物价水平的上涨，用“一篮子商品”（CPI）来衡量。中国国家统计局在全国约 500 个市县采价，测量会受到替代效应、质量改进、新产品等偏差的影响。“神奇货币日”的思想实验说明：如果所有价格和收入都同步翻倍，<q class="x">通货膨胀中既没有赢家，也没有输家</q><a class="src" href="https://weread.qq.com/web/reader/804326b0813ab6c61g019edek37632cd021737693cfc7149" target="_blank">《斯坦福极简经济学2》·如何跑赢通胀成为赢家</a>。现实中的通胀并不均匀：以固定利率借钱的人受益，存钱和放贷的人受损。恶性通胀（例如 1949 年的上海）会让价格完全失去信号作用。多数央行的通胀目标是 2% 左右。<a class="src" href="https://weread.qq.com/web/reader/f7f327705ae63ef7f54c98bkfc432fb0241fc490ca45614" target="_blank">书一·第22章</a></p>
 
-<h2>七、宏观政策</h2>
-<h3>21. 总供给与总需求</h3>
+<h2 id="s8">七、宏观政策</h2>
+<h3 id="s8-1">21. 总供给与总需求</h3>
 <p>萨伊说“供给创造需求”，凯恩斯说“需求创造供给”，折中的结论是<q class="x">短期看需求，长期看供给</q><a class="src" href="https://weread.qq.com/web/reader/f7f327705ae63ef7f54c98bk73532580243735b90b45ac8" target="_blank">《斯坦福极简经济学》·第24章标题</a>。长期的经济规模取决于潜在 GDP（劳动力、资本、技术、制度）；短期的衰退往往是总需求不足，而且工资和价格有粘性。</p>
 <figure>
 <svg viewBox="0 0 320 240" role="img" aria-label="菲利普斯曲线">
@@ -210,25 +275,25 @@ ul{padding-left:1.3em}li{margin:4px 0}
 <figcaption>图 4　菲利普斯曲线：短期存在取舍，长期是一条竖线（据原书内容重绘）<a class="src" href="https://weread.qq.com/web/reader/f7f327705ae63ef7f54c98bka3f32db0244a3f390d88bb9" target="_blank">书一·第25章</a></figcaption>
 </figure>
 <p><q class="x">菲利普斯曲线是一种短期现象</q><a class="src" href="https://weread.qq.com/web/reader/f7f327705ae63ef7f54c98bka3f32db0244a3f390d88bb9" target="_blank">《斯坦福极简经济学》·第25章标题</a>：20 世纪 70 年代，通胀和失业同时走高（“滞胀”），证明弗里德曼是对的。索洛的总结是，短期听凯恩斯派的，长期听新古典派的。</p>
-<h3>22. 财政政策、赤字与债务</h3>
+<h3 id="s8-2">22. 财政政策、赤字与债务</h3>
 <ul>
 <li>自动稳定器（累进税、失业救济）反应快；主动出台的刺激政策<q class="x">权衡性财政政策，知易行难</q><a class="src" href="https://weread.qq.com/web/reader/f7f327705ae63ef7f54c98bk7cb321502467cbbc409e62d" target="_blank">《斯坦福极简经济学》·第27章标题</a>：常常赶不上时机，也容易被政治干扰。</li>
 <li>赤字的影响可以用储蓄—投资恒等式来看：政府多借钱，要么私人储蓄增加，要么私人投资被挤出，要么外资流入增加。</li>
 <li>中国税收约占 GDP 的 18%，增值税占全部税收的 30% 以上，个人所得税只占约 5%（富国约为 25%）。<a class="src" href="https://weread.qq.com/web/reader/804326b0813ab6c61g019edek182326e0221182be0c5ca23" target="_blank">书二·世界各国都怎么收税</a></li>
 <li>中国官方赤字约占 GDP 的 3%，加上地方政府的“广义赤字”约为 10%；政府债务约为 GDP 的 40%（算上地方约 70%）。作者认为<q class="x">短期预算赤字不是一个巨大的问题，但它仍然有利有弊</q><a class="src" href="https://weread.qq.com/web/reader/804326b0813ab6c61g019edeke3632bd0222e369853df322" target="_blank">《斯坦福极简经济学2》·政府借款的短期利弊</a>，并强调<q class="x">中国目前的债务水平不是问题，但我们希望能避免它成为一个问题</q><a class="src" href="https://weread.qq.com/web/reader/804326b0813ab6c61g019edek1c3321802231c383cd30bb3" target="_blank">《斯坦福极简经济学2》·政府举债会影响私人储蓄吗</a>。需要警惕的风险点有：地方融资平台、约 30 万亿元的理财产品、企业债。<a class="src" href="https://weread.qq.com/web/reader/804326b0813ab6c61g019edek19c3222022419ca14e7eef7" target="_blank">书二·纵观全球政府的债务与风险</a></li>
 </ul>
-<h3>23. 货币与央行</h3>
+<h3 id="s8-3">23. 货币与央行</h3>
 <p><q class="x">金钱对我们没有任何用处，除非把它花掉</q><a class="src" href="https://weread.qq.com/web/reader/f7f327705ae63ef7f54c98bk32b321d024832bb90e89958" target="_blank">《斯坦福极简经济学》·第29章标题</a>。货币有三种职能：交易媒介、价值储藏、记账单位。雅浦岛上的石币说明，货币本质上是一种大家公认的所有权记录。M1 和 M2 里，现金只占很小一部分，银行通过放贷“创造”货币。</p>
 <ul>
 <li>央行的工具有三种：存款准备金率（中国 2011 年约为 21%，2018 年降到 14%–16%）、公开市场操作（中国 2015 年后以此为主）、定向放贷（SLF、MLF、PSL）。<a class="src" href="https://weread.qq.com/web/reader/804326b0813ab6c61g019edek1ff325f02181ff1de7742fc" target="_blank">书二·牵动每个人钱袋子的货币政策</a></li>
 <li><q class="x">中央银行既有权力，也有责任</q><a class="src" href="https://weread.qq.com/web/reader/f7f327705ae63ef7f54c98bkd2d32c50249d2ddea18fb39" target="_blank">《斯坦福极简经济学》·第30章标题</a>：它是最后贷款人，但面对放松的诱惑，要像奥德修斯把自己绑在桅杆上一样，给自己立规矩，比如设定通胀目标。<a class="src" href="https://weread.qq.com/web/reader/804326b0813ab6c61g019edek8e232ec02198e296a067180" target="_blank">书二·央行的权力与责任</a></li>
 <li>宽松政策的局限：<q class="x">你可以牵马到河边，但不能强迫它喝水</q><a class="src" href="https://weread.qq.com/web/reader/f7f327705ae63ef7f54c98bkad63251024aad61ab143c7e" target="_blank">《斯坦福极简经济学》·第31章标题</a>。通缩加上零利率，会让实际利率居高不下，这是大萧条那么可怕的原因之一。</li>
 </ul>
-<h3>24. 房地产与金融危机</h3>
+<h3 id="s8-4">24. 房地产与金融危机</h3>
 <p>美国的次贷危机是这样形成的：低利率、全球储蓄涌入、首付降到约 3%、抵押贷款证券化和影子银行，一旦房价下跌，整个链条就断了。<a class="src" href="https://weread.qq.com/web/reader/804326b0813ab6c61g019edek341323f021e34173cb3824c" target="_blank">书二·房地产与经济危机的关系</a> 中国的不同之处在于：首套房首付 30%、二套房 70%，所以房价下跌 10% 时，银行和购房者的缓冲都更厚。中国房价收入比在大城市约为 10 倍，房价上涨的来源包括收入增长、城市化、缺少其他投资渠道和供给限制。2003–2013 年，中国大城市房价年均上涨约 13%；另一方面，大城市的容积率约为 2，香港约为 10，供给是被压住的。作者判断，未来 5–20 年城市房价可能小幅下降，但不会出现美国那样的连锁危机。<a class="src" href="https://weread.qq.com/web/reader/804326b0813ab6c61g019edekc1632f5021fc16a5320f3dc" target="_blank">书二·关于中国房价经济学家怎么说</a></p>
 
-<h2>八、开放经济</h2>
-<h3>25. 贸易的好处与全球价值链</h3>
+<h2 id="s9">八、开放经济</h2>
+<h3 id="s9-1">25. 贸易的好处与全球价值链</h3>
 <p><q class="x">不用扩大贸易就很富裕的国家根本找不到</q><a class="src" href="https://weread.qq.com/web/reader/f7f327705ae63ef7f54c98bkd0932c3024bd09bf4154e7e" target="_blank">《斯坦福极简经济学》·第32章标题</a>。贸易的收益来自绝对优势、比较优势，以及规模经济、多样化、知识扩散等“动态收益”。iPhone 在美国设计，零件来自几十个国家，在深圳由富士康组装。约 2/3 的国际贸易属于“进口—加工—再出口”。<a class="src" href="https://weread.qq.com/web/reader/804326b0813ab6c61g019edeka5b325d0225a5bfc9e0772d" target="_blank">书二·全球价值链中的中国企业</a></p>
 <figure>
 <svg viewBox="0 0 480 220" role="img" aria-label="微笑曲线">
@@ -241,9 +306,9 @@ ul{padding-left:1.3em}li{margin:4px 0}
 <figcaption>图 5　微笑曲线（原书用文字描述了这一图形，此为重绘）<a class="src" href="https://weread.qq.com/web/reader/804326b0813ab6c61g019edeka5b325d0225a5bfc9e0772d" target="_blank">书二·全球价值链中的中国企业</a></figcaption>
 </figure>
 <p>中国需要先进口、组装后再出口的产品价值，占比从 1995 年的约 75% 降到约 50%。目标是让更多公司走到微笑曲线的两端。</p>
-<h3>26. 贸易差额的真正含义</h3>
+<h3 id="s9-2">26. 贸易差额的真正含义</h3>
 <p>书一的标题一句话点破：<q class="x">贸易顺差的真正意思是借钱给国外</q><a class="src" href="https://weread.qq.com/web/reader/f7f327705ae63ef7f54c98bk32932b102423295c76ac7d9" target="_blank">《斯坦福极简经济学》·第23章标题</a>。书二补充了另一面：<q class="x">贸易顺差和外国资本流入这两种愿望实际上是相互矛盾的</q><a class="src" href="https://weread.qq.com/web/reader/804326b0813ab6c61g019edekd67323c0227d67d8ab4fb04" target="_blank">《斯坦福极简经济学2》·看资本流动，规避金融风险</a>。顺差国生产多于消费，多出来的储蓄以对外投资的形式流出；逆差国则靠外资流入来弥补。双边贸易差额在宏观上没有意义；顺差不等于经济强，日本长期顺差，增长却很慢；逆差也不等于经济弱，美国长期逆差，仍然是最大的经济体。<a class="src" href="https://weread.qq.com/web/reader/804326b0813ab6c61g019edeka5732aa0226a5771bce9dc4" target="_blank">书二·贸易平衡有意义吗</a></p>
-<h3>27. 资本流动、汇率与危机</h3>
+<h3 id="s9-3">27. 资本流动、汇率与危机</h3>
 <ul>
 <li><b>FDI 与证券投资</b>：直接投资是长期的，会带来技术和管理经验，也更难快速撤离；证券投资进出都很快。2020 年，中国超过美国，成为全球最大的外资流入国。<a class="src" href="https://weread.qq.com/web/reader/804326b0813ab6c61g019edekd6432e00228d645920e3401" target="_blank">书二·国际投资：事关商品和就业</a></li>
 <li><b>汇率</b>：<q class="x">汇率剧烈波动会对经济造成很大干扰</q><a class="src" href="https://weread.qq.com/web/reader/f7f327705ae63ef7f54c98bk28d32de024d28dd2c795c7f" target="_blank">《斯坦福极简经济学》·第34章标题</a>。长期看，汇率向购买力平价靠拢；短期主要受资本流动和预期驱动。本币走高对进口商和出境游客有利，对出口商不利，谈不上绝对的“好”或“坏”。人民币汇率经历了三幕：1994 年汇率并轨，1994–2005 年约 8.3 元兑 1 美元，2005 年后实行有管理的浮动；外汇储备最高时约 4 万亿美元。<q class="x">没有什么问题是永久存在的，也没有什么解决办法是永久有效的</q><a class="src" href="https://weread.qq.com/web/reader/804326b0813ab6c61g019edek33e3289021c33e75ff09694" target="_blank">《斯坦福极简经济学2》·从人民币和美元看懂汇率难题</a>。</li>
@@ -251,7 +316,7 @@ ul{padding-left:1.3em}li{margin:4px 0}
 <li><b>WTO</b>：20 世纪 50 年代平均关税约为 40%，现在不到 4%。按龙永图的说法，中国加入 WTO 最大的意义是倒逼国内改革：外贸经营权从几十家国有外贸公司，放开给成千上万的企业。<a class="src" href="https://weread.qq.com/web/reader/804326b0813ab6c61g019edeka1d32a6022aa1d0c6e83eb4" target="_blank">书二·世贸组织和中国成员国身份</a></li>
 </ul>
 
-<h2>结语</h2>
+<h2 id="s10">结语</h2>
 <p>书一的最后一章写道：<q class="x">未来的经济不再是零和游戏</q><a class="src" href="https://weread.qq.com/web/reader/f7f327705ae63ef7f54c98bkd1f32d7024fd1fe173d0651" target="_blank">《斯坦福极简经济学》·第36章标题</a>。一国的增长不必以牺牲他国为代价。中国和印度的快速增长，让数亿人摆脱了贫困，这是过去几十年世界上最大的变化。</p>
 <p>通读两本书，我觉得最有用的是这几件事：</p>
 <ul>
@@ -263,4 +328,5 @@ ul{padding-left:1.3em}li{margin:4px 0}
 <li><b>对个人的直接启发</b>：职业上，工资取决于你的生产力和技能能不能迁移；理财上，看回报、风险、流动性和税收，尽早存钱，分散投资，不去博傻；面对新闻时，把“贸易顺差是好事”“汇率走高是好事”这类说法换成“对谁好，代价由谁承担”。</li>
 </ul>
 <p class="note">我的一个观察：书二写于 2018–2021 年前后，房价、债务、国企、汇率这几部分的数据已经过时，但分析框架仍然有用。读的时候可以把它当作“思考题模板”，再代入最新的数据自己推演一遍。</p>
+<a class="top" href="#toc">↑ 目录</a>
 </main></body></html>

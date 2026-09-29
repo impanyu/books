@@ -25,6 +25,14 @@ svg .r{stroke:var(--red);fill:none;stroke-width:2}svg .box{fill:var(--bg);stroke
 table{border-collapse:collapse;width:100%;font-size:14px;margin:12px 0}td,th{border:1px solid var(--line);padding:6px 8px;text-align:center}
 ul{padding-left:1.3em}li{margin:4px 0}
 .note{border-left:3px solid var(--line);padding-left:12px;color:var(--muted);font-size:15px}
+/* toc */
+nav.toc{background:var(--card);border-radius:8px;padding:14px 18px;margin:24px 0}
+nav.toc>b{display:block;margin-bottom:6px}
+nav.toc ol{margin:0;padding-left:1.1em}nav.toc ol ol{padding-left:1.2em;font-size:14px}
+nav.toc li{margin:2px 0}nav.toc a{color:var(--fg);text-decoration:none}nav.toc a:hover{color:var(--red)}
+h2,h3{scroll-margin-top:16px}
+a.top{position:fixed;right:16px;bottom:16px;background:var(--card);color:var(--muted);border-radius:20px;padding:6px 12px;font-size:13px;text-decoration:none;box-shadow:0 1px 4px rgba(0,0,0,.15)}
+/* /toc */
 </style>
 </head>
 <body><main>
@@ -35,11 +43,22 @@ ul{padding-left:1.3em}li{margin:4px 0}
 <b>怎么读：</b>黑字是我的归纳和组织；<q class="x">红字</q> 是原书摘录，后面的灰色小字链接直达微信读书对应章节。图都是按原书内容重画的示意图。
 </div>
 
-<h2>导读</h2>
+<nav class="toc" id="toc"><b>目录</b><ol>
+<li><a href="#s1">导读</a>
+</li>
+<li><a href="#s2">一、主题</a>
+<ol>
+<li><a href="#s2-1">1. 小节</a></li>
+</ol></li>
+<li><a href="#s3">结语</a>
+</li>
+</ol></nav>
+
+<h2 id="s1">导读</h2>
 <p>这本书讲什么、为什么读、本笔记怎样组织（结构自拟，不必照搬原书章节）。</p>
 
-<h2>一、主题</h2>
-<h3>1. 小节</h3>
+<h2 id="s2">一、主题</h2>
+<h3 id="s2-1">1. 小节</h3>
 <p>我的转述……<q class="x">原书短句摘录</q><a class="src" href="微信读书章节链接" target="_blank">《书名》·章节名</a></p>
 
 <figure>
@@ -52,6 +71,7 @@ ul{padding-left:1.3em}li{margin:4px 0}
 
 <p class="note">我的注释 / 联想。</p>
 
-<h2>结语</h2>
+<h2 id="s3">结语</h2>
 <p>全书一句话 + 对我有用的几条思考。</p>
+<a class="top" href="#toc">↑ 目录</a>
 </main></body></html>
