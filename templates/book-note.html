@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>书名·笔记</title>
+<style>
+:root{--bg:#fdfcf9;--fg:#1f1f1f;--muted:#6b6b6b;--red:#c62828;--line:#e6e2d9;--card:#f5f2ea}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#1b1b1d;--fg:#e8e6e1;--muted:#a3a09a;--red:#ff6b6b;--line:#3a3833;--card:#26252a}}
+:root[data-theme="dark"]{--bg:#1b1b1d;--fg:#e8e6e1;--muted:#a3a09a;--red:#ff6b6b;--line:#3a3833;--card:#26252a}
+body{background:var(--bg);color:var(--fg);font:16px/1.85 -apple-system,"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;margin:0;padding:0 16px}
+main{max-width:760px;margin:0 auto;padding:40px 0 80px}
+h1{font-size:30px;margin:0 0 4px}h2{font-size:22px;margin:48px 0 12px;padding-bottom:6px;border-bottom:1px solid var(--line)}h3{font-size:17px;margin:28px 0 6px}
+.sub{color:var(--muted);font-size:14px}
+.legend{background:var(--card);border-radius:8px;padding:12px 16px;font-size:14px;margin:20px 0}
+q.x{color:var(--red);quotes:"「" "」"}
+q.x::before{content:open-quote}q.x::after{content:close-quote}
+a.src{font-size:12px;color:var(--muted);margin-left:6px;text-decoration:none;border-bottom:1px dotted var(--muted);white-space:nowrap}
+figure{margin:20px 0;background:var(--card);border-radius:8px;padding:12px}
+figure svg{width:100%;height:auto;display:block}
+figcaption{font-size:13px;color:var(--muted);margin-top:6px}
+svg text{fill:var(--fg);font-size:13px}svg .m{fill:var(--muted);font-size:11px}
+svg .ln{stroke:var(--fg);fill:none;stroke-width:1.6}svg .ax{stroke:var(--muted);stroke-width:1.2;fill:none}
+svg .r{stroke:var(--red);fill:none;stroke-width:2}svg .box{fill:var(--bg);stroke:var(--fg);stroke-width:1.4}
+table{border-collapse:collapse;width:100%;font-size:14px;margin:12px 0}td,th{border:1px solid var(--line);padding:6px 8px;text-align:center}
+ul{padding-left:1.3em}li{margin:4px 0}
+.note{border-left:3px solid var(--line);padding-left:12px;color:var(--muted);font-size:15px}
+</style>
+</head>
+<body><main>
+<h1>书名 · 笔记</h1>
+<div class="sub">作者《书名》（多本书合编时列出全部）读书笔记 · YYYY-MM-DD</div>
+
+<div class="legend">
+<b>怎么读：</b>黑字是我的归纳和组织；<q class="x">红字</q> 是原书摘录，后面的灰色小字链接直达微信读书对应章节。图都是按原书内容重画的示意图。
+</div>
+
+<h2>导读</h2>
+<p>这本书讲什么、为什么读、本笔记怎样组织（结构自拟，不必照搬原书章节）。</p>
+
+<h2>一、主题</h2>
+<h3>1. 小节</h3>
+<p>我的转述……<q class="x">原书短句摘录</q><a class="src" href="微信读书章节链接" target="_blank">《书名》·章节名</a></p>
+
+<figure>
+<svg viewBox="0 0 520 300" role="img" aria-label="图的说明"><!-- 用 .ln .r .ax .box 等 class 画图 --></svg>
+<figcaption>图 1　图名（据原书内容重绘）<a class="src" href="章节链接" target="_blank">出处</a></figcaption>
+</figure>
+
+<table><tr><th>表头</th></tr><tr><td>数据</td></tr></table>
+<div class="sub" style="margin-top:-6px">表 1　表名（数据据<a class="src" href="章节链接">出处</a>整理）</div>
+
+<p class="note">我的注释 / 联想。</p>
+
+<h2>结语</h2>
+<p>全书一句话 + 对我有用的几条思考。</p>
+</main></body></html>
